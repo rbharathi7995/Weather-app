@@ -7,33 +7,38 @@
   <link rel="stylesheet" href="styles/weather.css"> 
 </head>
 <body>
-    
+
+  <div class="weather-app-container js-weather-app-container">
     <div>
       <span>Your City:</span>
       <span class="city-name js-city-name"></span>
     </div> 
+    <div class="error-message js-error-message"></div>
+
+    <div class="weather-condition js-weather-condition"></div>
 
 <div class="weather-container js-weather-container">
-     <div>
-      <span>Time =</span>
+     <div class="time-container">
+      <span>🕰️Time =</span>
       <span class="time js-time"></span>
 
-    </div>
-    <div>
-      <span>Temperature =</span>
+      </div>
+    <div class="temperature-container">
+      <span>🌡️Temperature =</span>
       <span class="temperature js-temperature"></span>
     </div>
-    <div>
-      <span>Wind Speed =</span>
+    <div class="wind-container">
+      <span>💨Wind Speed =</span>
       <span class="wind-speed js-wind-speed"></span>
 
     </div>
-    <div>
-      <span>Humidity =</span>
+    <div class="humidity-container">
+      <span>💧Humidity =</span>
       <span class="humidity js-humidity"></span>
 
     </div>
-</div>  
+ </div>  
+</div>
   <script type="module" src="scripts/weather.js">
   </script>
 </body>

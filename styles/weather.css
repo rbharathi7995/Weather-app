@@ -2,3 +2,24 @@
 
     margin-top: 20px;
 }
+
+.time-container,
+.temperature-container,
+.wind-container,
+.humidity-container{
+    background-color: skyblue;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+
+    
+}
+
+.weather-condition{
+  background-color:pink;
+  display:inline-block;
+  border-radius: 20px;
+  padding:10px;
+  margin-top: 20px;
+}
