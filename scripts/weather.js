@@ -16,7 +16,7 @@
         latitude=areaInfo.results[0].latitude
         longitude=areaInfo.results[0].longitude;
         
-        
+
       
     }
    
@@ -43,7 +43,7 @@
 
 
         document.querySelector('.js-time').innerHTML=info.current.time;
-        document.querySelector('.js-temperature').innerHTML=info.current.temperature_2m+"&deg;C";
+        document.querySelector('.js-temperature').innerHTML=Math.round(info.current.temperature_2m)+"&deg;C";
         document.querySelector('.js-wind-speed').innerHTML=info.current.wind_speed_10m+" km/h";
         document.querySelector('.js-humidity').innerHTML=info.current.relative_humidity_2m+"%" 
 
