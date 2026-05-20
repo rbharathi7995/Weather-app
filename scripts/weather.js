@@ -1,9 +1,8 @@
  let latitude='';
  let longitude='';
  let name='';
- document.querySelector('.js-search-button').addEventListener('click',()=>{
-    const area=document.querySelector('.js-area-search').value;
-   
+
+  const area=localStorage.getItem('city');
     document.querySelector('.js-city-name').innerHTML=area;
  async function renderAreaInfo() {
     
@@ -38,4 +37,3 @@
  }
  renderAreaInfo();
 
-});
