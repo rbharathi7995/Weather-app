@@ -19,3 +19,11 @@ A weather application built using HTML, CSS, JavaScript, and Open-Meteo API.
 
 ## Live Demo
 https://rbharathi7995.github.io/Weather-app/
+
+## Screenshots
+
+### Home Page
+![Home Page](images/home.jpeg)
+
+### Weather Result
+![Weather Result](images/weather-result.jpeg)
