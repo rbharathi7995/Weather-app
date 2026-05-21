@@ -1,46 +1,25 @@
-let latitude='';
-let longitude='';
-let name='';
- 
+import { fetchCityData } from "./api.js";
+import { cityValidation } from "./utils.js";
+
+
 
  document.body.style.backgroundColor='Aliceblue'
-
-     async function renderAreaInfo(area) {
-       async function areaName(){
+  
+    async function renderAreaInfo(area) {
+         async function areaData(){
         
-        const reaction= await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${area}&count=1`);
-        const areaInfo=await reaction.json();
-       
-        if(!areaInfo.results || areaInfo.results.length === 0){
+        const cityData=await fetchCityData(area);
+        
+      if(!cityData){
          return false;
         }
-        else{
-        name=areaInfo.results[0].name;
-        latitude=areaInfo.results[0].latitude
-        longitude=areaInfo.results[0].longitude;
-
+      else{
         return true;
-        }
-        
+      }
+       
     }
-    const validCity=await areaName();
-  
-   if(validCity === false){
-    document.querySelector('.js-search-valid-msg').innerHTML="Invalid city name"
-
-   setTimeout(()=>{
-    document.querySelector('.js-search-valid-msg').innerHTML=""
-
-    },3000);
-   
-   }
-
-   else{
-  localStorage.setItem('city',area);
-  window.location.href='weather.html';
-   }
-
-  
+    const validCity=await areaData();
+    cityValidation(validCity,area);
   }
 
  document.querySelector('.js-search-button').addEventListener('click',()=>{
