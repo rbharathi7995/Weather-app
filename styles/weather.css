@@ -1,3 +1,12 @@
+.city-text,
+.city-name{
+    font-weight: bold;
+    display:inline-block;
+    font-size: 20px;
+    margin-top:10px;
+    
+}
+
 .weather-container{
 
     margin-top: 20px;
@@ -9,17 +18,32 @@
 .humidity-container{
     background-color: skyblue;
     margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 15px;
+    border-radius: 30px;
     display: inline-block;
+    font-family:Arial;
+    min-width: 250px;
 
     
 }
 
+.js-time,
+.js-temperature,
+.js-wind-speed,
+.js-humidity{
+    font-weight:bold ;
+}
 .weather-condition{
   background-color:pink;
   display:inline-block;
   border-radius: 20px;
   padding:10px;
   margin-top: 20px;
+}
+
+.loading-msg{
+    color:rgb(19, 122, 9);
+    font-size: 20px;
+    margin-top: 5px;
+
 }

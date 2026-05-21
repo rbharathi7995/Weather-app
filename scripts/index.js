@@ -2,14 +2,10 @@ let latitude='';
 let longitude='';
 let name='';
  
- document.querySelector('.js-search-button').addEventListener('click',()=>{
-    const area=document.querySelector('.js-area-search').value;
-  /*    if(area === ''){
-      document.querySelector('.js-search-valid-msg').innerHTML="Please enter valid city name";
-      return;
-    }
-*/
-    async function renderAreaInfo() {
+
+ document.body.style.backgroundColor='Aliceblue'
+
+     async function renderAreaInfo(area) {
        async function areaName(){
         
         const reaction= await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${area}&count=1`);
@@ -43,10 +39,22 @@ let name='';
   localStorage.setItem('city',area);
   window.location.href='weather.html';
    }
+
   
   }
-    renderAreaInfo();
 
+ document.querySelector('.js-search-button').addEventListener('click',()=>{
+    const area=document.querySelector('.js-area-search').value;
+    renderAreaInfo(area);
+
+ })
+
+ document.querySelector('.js-area-search').addEventListener('keydown',(event)=>{
+  if(event.key === 'Enter'){
+    const area=document.querySelector('.js-area-search').value;
+    renderAreaInfo(area);
+ 
+  }
  })
  
  

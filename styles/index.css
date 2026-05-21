@@ -1,3 +1,10 @@
+.search-button{
+
+    background-color: orange;
+    border-color: none;
+    
+}
+
 .search-valid-msg{
     margin-top: 10px;
     color:red;
